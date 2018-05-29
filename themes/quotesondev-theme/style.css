@@ -439,7 +439,7 @@ a {
   a:visited {
     color: #00cc00; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #009900; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
