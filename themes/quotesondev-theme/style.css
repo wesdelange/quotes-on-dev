@@ -631,13 +631,15 @@ object {
     content: "\f10d";
     font-weight: 900;
     font-family: "Font Awesome 5 Free";
-    font-size: 100px; }
+    font-size: 100px;
+    color: #00cc00; }
   .site-main::after {
     display: inline-block;
     content: "\f10e";
     font-weight: 900;
     font-family: "Font Awesome 5 Free";
-    font-size: 100px; } }
+    font-size: 100px;
+    color: #00cc00; } }
 
 /* Footer */
 .site-footer .menu {
