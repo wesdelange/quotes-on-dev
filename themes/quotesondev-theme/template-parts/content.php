@@ -13,6 +13,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_excerpt(); ?>
+		<i class="fa fa-envelope"><?php the_excerpt(); ?></i>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

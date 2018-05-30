@@ -624,6 +624,21 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+/* About */
+@media (min-width: 1080px) {
+  .site-main::before {
+    display: inline-block;
+    content: "\f10d";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    font-size: 100px; }
+  .site-main::after {
+    display: inline-block;
+    content: "\f10e";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    font-size: 100px; } }
+
 /* Footer */
 .site-footer .menu {
   display: -webkit-box;
