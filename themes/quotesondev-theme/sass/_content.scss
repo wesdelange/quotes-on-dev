@@ -3,7 +3,9 @@
 --------------------------------------------------------------*/
 
 body {
-    font-weight: lighter;
+	font-weight: lighter;
+	max-width: $fixed__width;
+	margin: auto;
 }
 
 a {
@@ -14,6 +16,44 @@ a {
 .site {
     padding: 2.5%;
 }
+
+button {
+	background-color: transparent;
+}
+
+
+
+/* Desktop Version */
+
+@include desktop {
+	.site-main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		article {
+			width: 50%;
+		}
+	}
+    .site-main::before {
+        content: "\f10d";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        font-size: 100px;
+        color: $color__green;
+    } 
+    .site-main::after {
+        content: "\f10e";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        font-size: 100px;
+        color: $color__green;
+    }   
+}
+
+/* Tablet Version */
+
+
+
 
 /* Posts and pages */
 
