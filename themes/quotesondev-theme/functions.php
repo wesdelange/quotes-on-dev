@@ -71,7 +71,7 @@ function qod_scripts() {
 		
 		wp_localize_script( 'qod_api', 'api_vars', array(
 			'rest_url' => esc_url_raw( rest_url() ),
-			'nonce' => wp_create_nonce( 'wp_rest' )
+			'wpapi_nonce' => wp_create_nonce( 'wp_rest' )
 		));
 	}
 }

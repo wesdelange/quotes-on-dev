@@ -34,16 +34,14 @@ get_header(); ?>
                 </div>
                 <div>
                     <label for="quote-source">Where did you find this Quote? (e.g. book name)</label>
-                    <input type="text" name="quote_source" id="quote-source" required
-                    aria-required="true">
+                    <input type="text" name="quote_source" id="quote-source">
                 </div>
                 <div>
                     <label for="quote-source-url">Provide the URL of the quote source, if available.</label>
-                    <input type="url" name="quote_source_url" id="quote-source-url" required
-                    aria-required="true">
+                    <input type="url" name="quote_source_url" id="quote-source-url">
                 </div>
 
-                <input type="submit" value="Submit Quote">
+                <input type="submit" value="Submit Quote" id="sumbit-quote">
 
             </form>
             
