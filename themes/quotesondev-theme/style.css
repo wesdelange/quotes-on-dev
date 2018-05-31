@@ -600,14 +600,14 @@ button:hover {
 
 /* Desktop Version */
 @media (min-width: 1080px) {
-  .site-main {
+  .home .site-main, .page-template-default .site-main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .site-main .container {
+    .home .site-main .container, .page-template-default .site-main .container {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       width: 70%;
@@ -619,9 +619,9 @@ button:hover {
           -ms-flex-direction: column;
               flex-direction: column;
       margin: auto; }
-      .site-main .container p {
+      .home .site-main .container p, .page-template-default .site-main .container p {
         font-size: 2.5rem; }
-      .site-main .container .entry-meta {
+      .home .site-main .container .entry-meta, .page-template-default .site-main .container .entry-meta {
         width: 100%;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -630,22 +630,29 @@ button:hover {
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center; }
-  .site-main::before {
+                align-items: center;
+        line-height: 1; }
+        .home .site-main .container .entry-meta .entry-title, .page-template-default .site-main .container .entry-meta .entry-title {
+          margin: 0; }
+        .home .site-main .container .entry-meta .source, .page-template-default .site-main .container .entry-meta .source {
+          font-size: 1.5rem; }
+  .home .site-main::before, .page-template-default .site-main::before {
     content: "\f10d";
     font-weight: 900;
     font-family: "Font Awesome 5 Free";
     font-size: 100px;
     color: #00cc00; }
-  .site-main::after {
+  .home .site-main::after, .page-template-default .site-main::after {
     content: "\f10e";
     font-weight: 900;
     font-family: "Font Awesome 5 Free";
     font-size: 100px;
     color: #00cc00; }
-  .site-footer {
+  .home .site-footer, .page-template-default .site-footer {
     max-width: 1080px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -662,15 +669,55 @@ button:hover {
             justify-content: flex-end;
     margin-top: 5%;
     margin-bottom: 0; }
-    .site-footer .main-navigation {
+    .home .site-footer .main-navigation, .page-template-default .site-footer .main-navigation {
       width: auto; }
-      .site-footer .main-navigation .menu {
+      .home .site-footer .main-navigation .menu, .page-template-default .site-footer .main-navigation .menu {
         margin-right: 1rem; }
-        .site-footer .main-navigation .menu li:last-child {
+        .home .site-footer .main-navigation .menu li:last-child, .page-template-default .site-footer .main-navigation .menu li:last-child {
           border-right: 1px solid #ffffff; }
-    .site-footer .site-info p {
+    .home .site-footer .site-info p, .page-template-default .site-footer .site-info p {
       line-height: 1;
-      margin: 0; } }
+      margin: 0; }
+  .page-template-default .archive-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 70%;
+    margin: auto; }
+    .page-template-default .archive-container div ul {
+      list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+      margin: 0;
+      padding: 0; }
+      .page-template-default .archive-container div ul li {
+        margin-right: 2%;
+        font-size: 1.4rem; }
+  .page-template-default article {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto; } }
 
 /* Tablet Version */
 /* Posts and pages */
@@ -760,6 +807,16 @@ object {
       outline: none;
       width: 30%;
       color: #00cc00; }
+
+/* Header */
+.site-header {
+  max-width: 1080px;
+  margin: 4% auto; }
+  .site-header .site-branding {
+    width: 100%; }
+    .site-header .site-branding img {
+      width: 70%;
+      margin: 0 12.5%; }
 
 /* Footer */
 .site-footer .menu {

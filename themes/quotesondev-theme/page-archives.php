@@ -11,43 +11,43 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 
-
-			<header class="page-header">
-				<?php
-					the_title( '<h1 class="entry-title">', '</h1>' );
-				?>
-            </header><!-- .page-header -->
-            
-            <div class="post-authors">
-                <h2>Quote Authors</h2>
-                <ul>
+            <div class="archive-container">
+                <header class="page-header">
                     <?php
-                        $posts = get_posts('posts_per_page=-1');
-                        foreach ( $posts as $post ) : setup_postdata( $post );
+                        the_title( '<h1 class="entry-title">', '</h1>' );
                     ?>
-                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                        <?php endforeach; wp_reset_postdata(); ?>
-                </ul>
-            </div>
+                </header><!-- .page-header -->
+                
+                <div class="post-authors">
+                    <h2>Quote Authors</h2>
+                    <ul>
+                        <?php
+                            $posts = get_posts('posts_per_page=-1');
+                            foreach ( $posts as $post ) : setup_postdata( $post );
+                        ?>
+                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                            <?php endforeach; wp_reset_postdata(); ?>
+                    </ul>
+                </div>
 
-            <div class="post-categories">
-                <h2>Categories</h2>
-                <ul>
-                    <?php wp_list_categories( 'title_li='); ?>
-                </ul>
-            </div>
+                <div class="post-categories">
+                    <h2>Categories</h2>
+                    <ul>
+                        <?php wp_list_categories( 'title_li='); ?>
+                    </ul>
+                </div>
 
-            <div class="post-tags">
-                <h2>Tags</h2>
-                    <?php wp_tag_cloud( array(
-                    'smallest' => 1,
-                    'largest' => 1,
-                    'unit' => 'rem',
-                    'format' => 'list'
-                )  ); ?>
-            </div>
+                <div class="post-tags">
+                    <h2>Tags</h2>
+                        <?php wp_tag_cloud( array(
+                        'smallest' => 1.4,
+                        'largest' => 1.4,
+                        'unit' => 'rem',
+                        'format' => 'list'
+                    )  ); ?>
+                </div>
 
-
+            </div> <!--archive container-->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

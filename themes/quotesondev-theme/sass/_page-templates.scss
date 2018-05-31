@@ -41,7 +41,18 @@
     }
 }
 
-
+/* Header */
+.site-header {
+    max-width: $fixed__width;
+    margin: 4% auto;
+    .site-branding {
+        width: 100%;        
+        img {
+            width: 70%;
+            margin: 0 12.5%;
+        }
+    }
+}
 
 
 /* Footer */

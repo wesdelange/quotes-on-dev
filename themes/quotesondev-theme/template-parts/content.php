@@ -44,7 +44,7 @@ echo esc_html( $source_url );
 
 
 	</article><!-- #post-## -->
-	<?php the_posts_navigation(); ?>
+
 	<!-- Button to show another quote -->
 	<?php if ( is_home() || is_single() ) : ?>
 		<button type="button" id="new-quote-button">Show Me Another!</button>
