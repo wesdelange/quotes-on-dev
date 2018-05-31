@@ -17,7 +17,7 @@ a {
     padding: 2.5%;
 }
 
-button, button:focus, button:active, button:hover {
+button, button:focus, button:active, button:hover, {
 	background: transparent;
 	border: 2px solid $color__green;
 	box-shadow: none;
@@ -70,7 +70,29 @@ button:hover {
         font-family: "Font Awesome 5 Free";
         font-size: 100px;
         color: $color__green;
-    }   
+	}
+	.site-footer {
+		max-width: $fixed__width;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		margin-top: 5%;
+		margin-bottom: 0;
+		.main-navigation {
+			width: auto;
+			.menu {
+				margin-right: 1rem;
+				li:last-child {
+					border-right: 1px solid #ffffff;
+				}
+			}
+		}
+		.site-info p {
+			line-height: 1;
+			margin: 0;
+		}
+	}   
 }
 
 /* Tablet Version */

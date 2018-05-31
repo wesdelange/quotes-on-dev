@@ -91,7 +91,7 @@
             $('.submit-success-message').show();    
             
             //clear the inputs in form and make form disappear
-              $("#quote-submission-form").hide();
+            $("#quote-submission-form").hide();
             
           }).fail( function(){
             

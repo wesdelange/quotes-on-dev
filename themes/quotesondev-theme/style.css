@@ -644,7 +644,33 @@ button:hover {
     font-weight: 900;
     font-family: "Font Awesome 5 Free";
     font-size: 100px;
-    color: #00cc00; } }
+    color: #00cc00; }
+  .site-footer {
+    max-width: 1080px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 5%;
+    margin-bottom: 0; }
+    .site-footer .main-navigation {
+      width: auto; }
+      .site-footer .main-navigation .menu {
+        margin-right: 1rem; }
+        .site-footer .main-navigation .menu li:last-child {
+          border-right: 1px solid #ffffff; }
+    .site-footer .site-info p {
+      line-height: 1;
+      margin: 0; } }
 
 /* Tablet Version */
 /* Posts and pages */
@@ -693,7 +719,7 @@ object {
 /* About */
 /* Submit a Quote Page */
 .quote-submission {
-  width: 70%;
+  width: 75%;
   margin: auto; }
   .quote-submission #quote-submission-form {
     display: -webkit-box;
@@ -702,7 +728,11 @@ object {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 400px; }
     .quote-submission #quote-submission-form div {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -711,18 +741,31 @@ object {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
-    .quote-submission #quote-submission-form label {
-      width: 60%; }
     .quote-submission #quote-submission-form input, .quote-submission #quote-submission-form textarea {
       border: 1px solid #00cc00;
-      background: transparent; }
+      background: transparent;
+      color: white;
+      width: 60%; }
+    .quote-submission #quote-submission-form textarea {
+      border: 1px solid #00cc00;
+      background: transparent;
+      color: white;
+      width: 100%; }
+    .quote-submission #quote-submission-form #submit-quote {
+      margin: 0;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      font-size: 1rem;
+      text-shadow: none;
+      outline: none;
+      width: 30%;
+      color: #00cc00; }
 
 /* Footer */
 .site-footer .menu {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 4%; }
+  display: flex; }
   .site-footer .menu li {
     border-right: 1px solid #ffffff;
     line-height: 1;
