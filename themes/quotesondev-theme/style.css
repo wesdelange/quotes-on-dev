@@ -604,15 +604,35 @@ button:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .site-main article {
-      width: 50%; }
+    .site-main .container {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 70%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin: auto; }
+      .site-main .container p {
+        font-size: 2.5rem; }
+      .site-main .container .entry-meta {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
   .site-main::before {
     content: "\f10d";
     font-weight: 900;
@@ -671,6 +691,32 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* About */
+/* Submit a Quote Page */
+.quote-submission {
+  width: 70%;
+  margin: auto; }
+  .quote-submission #quote-submission-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .quote-submission #quote-submission-form div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .quote-submission #quote-submission-form label {
+      width: 60%; }
+    .quote-submission #quote-submission-form input, .quote-submission #quote-submission-form textarea {
+      border: 1px solid #00cc00;
+      background: transparent; }
+
 /* Footer */
 .site-footer .menu {
   display: -webkit-box;

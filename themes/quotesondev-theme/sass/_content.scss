@@ -39,10 +39,22 @@ button:hover {
 @include desktop {
 	.site-main {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
-		article {
-			width: 50%;
+		.container {
+			box-sizing: border-box;
+			width: 70%;
+			display: flex;
+			flex-direction: column;
+			margin: auto;
+			p {
+				font-size: 2.5rem;
+			}
+			.entry-meta {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
 		}
 	}
     .site-main::before {

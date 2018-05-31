@@ -45,7 +45,7 @@ get_header(); ?>
 
             </form>
             
-            <p class="submit-success-message" style="display:none"></p><!-- need to add JS to create success message on submission-->
+            <p class="submit-success-message" style="display:none">Success your Quote has been Submitted!</p><!-- need to add JS to create success message on submission-->
         
         
         </div><!-- quote submission wrapper -->

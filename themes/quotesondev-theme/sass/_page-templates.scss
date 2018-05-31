@@ -4,6 +4,28 @@
 /* About */
 
 
+/* Submit a Quote Page */
+.quote-submission {
+    width: 70%;
+    margin: auto;
+    #quote-submission-form {
+        display: flex;
+        flex-direction: column;
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            width: 60%;
+        }
+        input, textarea {
+            border: 1px solid $color__green;
+            background: transparent;
+        }
+    }
+}
+
+
 
 
 /* Footer */
