@@ -18,13 +18,21 @@
 
 
 /* About */
-
-.entry-header {
-    .entry-title {
-        font-size: 2rem;
-        font-weight: 400;
+.page {
+    .site-main {
+        width: $fixed__width;
+    }
+    .entry-content{
+        margin: auto;
+    }
+    .entry-header {
+        .entry-title {
+            font-size: 2rem;
+            font-weight: 400;
+        }
     }
 }
+
 
 /* All Archives Page */
 
@@ -49,11 +57,11 @@
             align-content: flex-start;
             margin: 0;
             padding: 0;
+            line-height: 2rem;
             li {
                 margin-right: 1.125rem;
                 margin-bottom: .5rem;
                 font-size: 1rem;
-                line-height: 1.5rem;
             }
         }
     }
@@ -96,7 +104,7 @@
         #submit-quote {
             margin: 0;
             box-shadow: none;
-            font-size: 1rem;
+            font-size: 1.25rem;
             text-shadow: none;
             outline: none;
             width: 50%;
@@ -104,7 +112,7 @@
         }
         #submit-quote:hover {
             border-color: darken($color__green, 10%);
-            color: darken($color__green, 10%);
+            color: darken($color__green, 10%);  
         }
     }
 }
@@ -126,6 +134,7 @@
 /* Footer */
 .site-footer{
     margin: 12% auto;
+    font-size: 1rem;
     .menu {
         display: flex;
         margin: 6% auto;
@@ -143,9 +152,9 @@
     }
 } 
 
-/* Error 404 */
+/* Error 404 and failed search results page */
 
-.error-404 {
+.error-404, .search-no-results {
     width: 100%;
     margin: auto;
     h1 {
@@ -201,12 +210,45 @@
     }
 }
 
+.search-no-results .page-header {
+    display: none;
+}
+
+/* Single Archive page */
+
+.archive {
+    .site-main {
+        display: flex;
+        .archive-container {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            .page-header {
+                border-bottom: 1px dotted #ffffff;
+            }
+            .container {
+                width: 100%;
+                article {
+                    border-bottom: 1px dotted #ffffff;
+                    padding-bottom: 5%;
+                }
+                .entry-header .entry-title {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
 /* Media Queries */
 
 /* Desktop Version */
 
 @include desktop {
-	.home, .page-template-default, .single, .error404, .search {
+    .site {
+        padding: 0;
+    }
+	.home, .page-template-default, .single, .error404, .search, .archive {
 		.site-main {
 			display: flex;
 			justify-content: center;
@@ -229,39 +271,23 @@
 			content: "\f10d";
 			font-weight: 900;
 			font-family: "Font Awesome 5 Free";
-			font-size: 100px;
+			font-size: 125px;
 			color: $color__green;
 		} 
 		.site-main::after {
 			content: "\f10e";
 			font-weight: 900;
 			font-family: "Font Awesome 5 Free";
-			font-size: 100px;
+			font-size: 125px;
 			color: $color__green;
-		}
-		.site-footer {
-			max-width: $fixed__width;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: flex-end;
-			margin-top: 5%;
-			margin-bottom: 0;
-			.main-navigation {
-				width: auto;
-				.menu {
-					margin-right: 1rem;
-					li:last-child {
-						border-right: 1px solid #ffffff;
-					}
-				}
-			}
-			.site-info p {
-				line-height: 1;
-				margin: 0;
-			}
-		}   
-	}
+        } 
+        .site-footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
 	.page-template-default {
 		.archive-container {	
 			width: 70%;
@@ -287,7 +313,7 @@
 			flex-direction: column;
 			margin: auto;
 		}
-	}
+    }
 }
 
 /* Tablet Version */
@@ -325,5 +351,27 @@
     .quote-submission #quote-submission-form #submit-quote {
         width: 30%;
     }
+    .site-footer {
+        max-width: $fixed__width;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 5%;
+        margin-bottom: 0;
+        .main-navigation {
+            width: auto;
+            .menu {
+                margin-right: 1rem;
+                li:last-child {
+                    border-right: 1px solid #ffffff;
+                }
+            }
+        }
+        .site-info p {
+            line-height: 1;
+            margin: 0;
+        }
+    }  
 }
 

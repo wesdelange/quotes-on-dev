@@ -3,10 +3,14 @@
 --------------------------------------------------------------*/
 
 body {
-	font-weight: lighter;
 	max-width: $fixed__width;
 	margin: auto;
+	line-height: 1.5;
+	font-weight: lighter;
+	font-size: 1.25rem;
 }
+
+
 
 a {
 	text-decoration: none;
@@ -24,7 +28,7 @@ button, button:focus, button:active, button:hover, {
 	margin: 0 auto;
 	padding: .75rem 2.5rem;
 	color: $color__green;
-	font-size: 1rem;
+	font-size: 1.25rem;
 	font-weight: bolder;
 	text-shadow: none;
 	outline: none;
@@ -34,6 +38,9 @@ button:hover {
 	color: darken($color__green, 10%);
 }
 
+.pagination a {
+	margin: 0 .25rem;
+}
 
 /* Posts and pages */
 

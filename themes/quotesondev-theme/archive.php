@@ -11,7 +11,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
+		<div class="archive-container">
 			<header class="page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -19,22 +19,28 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+					<?php
+						get_template_part( 'template-parts/content' );
+					?>
 
-			<?php the_posts_navigation(); ?>
+				<?php endwhile; ?>
 
-		<?php else : ?>
+				<?php the_posts_pagination( array(
+					'mid_size'  => 2,
+					'prev_text' => __( '&larr;Previous', 'textdomain' ),
+					'next_text' => __( 'Next&rarr;', 'textdomain' ),
+				) ); ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php else : ?>
 
-		<?php endif; ?>
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
+				<?php endif; ?>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
