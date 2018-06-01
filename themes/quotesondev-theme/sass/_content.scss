@@ -22,8 +22,10 @@ button, button:focus, button:active, button:hover, {
 	border: 2px solid $color__green;
 	box-shadow: none;
 	margin: 0 auto;
+	padding: .75rem 2.5rem;
 	color: $color__green;
 	font-size: 1rem;
+	font-weight: bolder;
 	text-shadow: none;
 	outline: none;
 }
@@ -31,113 +33,6 @@ button:hover {
 	border-color: darken($color__green, 10%);
 	color: darken($color__green, 10%);
 }
-
-
-
-/* Desktop Version */
-
-@include desktop {
-	.home, .page-template-default {
-		.site-main {
-			display: flex;
-			justify-content: center;
-			.container {
-				box-sizing: border-box;
-				width: 70%;
-				display: flex;
-				flex-direction: column;
-				margin: auto;
-				p {
-					font-size: 2.5rem;
-				}
-				.entry-meta {
-					width: 100%;
-					display: flex;
-					flex-direction: row;
-					flex-wrap: wrap;
-					align-items: center;
-					line-height: 1;
-					.entry-title {
-						margin: 0;
-					}
-					.source {
-						font-size: 1.5rem;
-					}
-				}
-			}
-		}
-		.site-main::before {
-			content: "\f10d";
-			font-weight: 900;
-			font-family: "Font Awesome 5 Free";
-			font-size: 100px;
-			color: $color__green;
-		} 
-		.site-main::after {
-			content: "\f10e";
-			font-weight: 900;
-			font-family: "Font Awesome 5 Free";
-			font-size: 100px;
-			color: $color__green;
-		}
-		.site-footer {
-			max-width: $fixed__width;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: flex-end;
-			margin-top: 5%;
-			margin-bottom: 0;
-			.main-navigation {
-				width: auto;
-				.menu {
-					margin-right: 1rem;
-					li:last-child {
-						border-right: 1px solid #ffffff;
-					}
-				}
-			}
-			.site-info p {
-				line-height: 1;
-				margin: 0;
-			}
-		}   
-	}
-	.page-template-default {
-		.archive-container {
-			display: flex;
-			flex-direction: column;	
-			width: 70%;
-			margin: auto;
-			div {
-				ul {
-					list-style: none;
-					display: flex;
-					flex-direction: row;
-					flex-wrap: wrap;
-					align-content: flex-start;
-					margin: 0;
-					padding: 0;
-					li {
-						margin-right: 2%;
-						font-size: 1.4rem;
-					}
-				}
-			}		
-		}
-		article {
-			box-sizing: border-box;
-			width: 70%;
-			display: flex;
-			flex-direction: column;
-			margin: auto;
-		}
-	}
-}
-
-/* Tablet Version */
-
-
 
 
 /* Posts and pages */

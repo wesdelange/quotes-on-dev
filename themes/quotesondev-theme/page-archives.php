@@ -40,8 +40,8 @@ get_header(); ?>
                 <div class="post-tags">
                     <h2>Tags</h2>
                         <?php wp_tag_cloud( array(
-                        'smallest' => 1.4,
-                        'largest' => 1.4,
+                        'smallest' => 1,
+                        'largest' => 1,
                         'unit' => 'rem',
                         'format' => 'list'
                     )  ); ?>

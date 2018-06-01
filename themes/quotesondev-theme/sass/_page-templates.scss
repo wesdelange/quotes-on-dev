@@ -1,12 +1,72 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+
+/* Index */
+
+.blog {
+    .container {
+        p {
+            font-size: 1.25rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: lighter;
+        }
+    }
+}
+
+
 /* About */
+
+.entry-header {
+    .entry-title {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}
+
+/* All Archives Page */
+
+.archive-container {
+    display: flex;
+    flex-direction: column;	
+    width: 100%;
+    .entry-title {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    div {
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            margin: 0;
+            padding: 0;
+            li {
+                margin-right: 1.125rem;
+                margin-bottom: .5rem;
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+}
+
+
+
+
 
 
 /* Submit a Quote Page */
 .quote-submission {
-    width: 75%;
+    width: 100%;
     margin: auto;
     #quote-submission-form {
         display: flex;
@@ -35,7 +95,7 @@
             font-size: 1rem;
             text-shadow: none;
             outline: none;
-            width: 30%;
+            width: 50%;
             color: $color__green;
         }
     }
@@ -48,8 +108,8 @@
     .site-branding {
         width: 100%;        
         img {
-            width: 70%;
-            margin: 0 12.5%;
+            width: 100%;
+            margin: auto;
         }
     }
 }
@@ -57,8 +117,10 @@
 
 /* Footer */
 .site-footer{
+    margin: 12% auto;
     .menu {
         display: flex;
+        margin: 6% auto;
         li {
             border-right: 1px solid #ffffff;
             line-height: 1;
@@ -73,8 +135,129 @@
     }
 } 
 
+/* Media Queries */
 
+/* Desktop Version */
 
-/* All Archives Page */
+@include desktop {
+	.home, .page-template-default, .single {
+		.site-main {
+			display: flex;
+			justify-content: center;
+			.container {
+				box-sizing: border-box;
+				width: 70%;
+				display: flex;
+				flex-direction: column;
+				margin: auto;
+				p {
+					font-size: 2.5rem;
+				}
+			}
+		}
+		.site-main::before {
+			content: "\f10d";
+			font-weight: 900;
+			font-family: "Font Awesome 5 Free";
+			font-size: 100px;
+			color: $color__green;
+		} 
+		.site-main::after {
+			content: "\f10e";
+			font-weight: 900;
+			font-family: "Font Awesome 5 Free";
+			font-size: 100px;
+			color: $color__green;
+		}
+		.site-footer {
+			max-width: $fixed__width;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-end;
+			margin-top: 5%;
+			margin-bottom: 0;
+			.main-navigation {
+				width: auto;
+				.menu {
+					margin-right: 1rem;
+					li:last-child {
+						border-right: 1px solid #ffffff;
+					}
+				}
+			}
+			.site-info p {
+				line-height: 1;
+				margin: 0;
+			}
+		}   
+	}
+	.page-template-default {
+		.archive-container {	
+			width: 70%;
+			margin: auto;
+			div ul li {
+                margin-right: 2%;
+                font-size: 1.4rem;
+            }
+            .post-tags ul li a {
+                font-size: 1.4rem !important;
+            }		
+		}
+		.quote-submission {
+			width: 75%;
+				#submit-quote {
+					width: 30%;
+				}
+			}
+		article {
+			box-sizing: border-box;
+			width: 70%;
+			display: flex;
+			flex-direction: column;
+			margin: auto;
+		}
+	}
+}
 
-/* Submit a Quote Page */
+/* Tablet Version */
+
+@include tablet {
+	.site-header .site-branding {
+        width: 75%;
+        margin: auto;
+    }
+    .site-main .container  {
+            width: 100%;
+            p {
+                font-size: 1.75rem;
+            }
+            .entry-meta {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                line-height: 1;
+                .entry-title {
+                    margin: 0;
+                    font-weight: lighter;
+                }
+                .source {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    .archive-container {
+        div ul li {
+            font-size: 1.25rem;
+        }
+        .post-tags ul li a {
+            font-size: 1.25rem !important;
+        }
+    }
+    .quote-submission #quote-submission-form #submit-quote {
+        width: 30%;
+    }
+}
+

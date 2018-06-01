@@ -28,7 +28,7 @@ echo esc_html( $source_url );
 		
 		<div class="entry-meta">
 			
-			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+			<?php the_title('<h2 class="entry-title">', '</h2>' ); ?>
 
 			<?php if( $source && $source_url ) : ?>
 				<span class="source">, <a href="<?php echo $source_url; ?> "><?php echo $source; ?></a></span>
