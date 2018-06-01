@@ -135,12 +135,41 @@
     }
 } 
 
+/* Error 404 */
+
+.error-404 {
+    width: 100%;
+    margin: auto;
+    h1 {
+        font-weight: lighter;
+    }
+    .search-field {
+        background: transparent;
+        border: 2px solid $color__green;
+        width: 240px;
+        font-size: 1.25rem;
+        padding-left: .75rem;
+    }
+    .search-submit {
+        border: 0;
+        margin-left: .75rem;
+        padding: 0;
+    }
+    .search-submit::before {
+        content: "\f002";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        font-size: 1.25rem;
+        color: $color__green;
+    }
+}
+
 /* Media Queries */
 
 /* Desktop Version */
 
 @include desktop {
-	.home, .page-template-default, .single {
+	.home, .page-template-default, .single, .error404 {
 		.site-main {
 			display: flex;
 			justify-content: center;
@@ -153,7 +182,11 @@
 				p {
 					font-size: 2.5rem;
 				}
-			}
+            }
+            .error-404 {
+                width: 70%;
+                margin: auto;
+            }
 		}
 		.site-main::before {
 			content: "\f10d";
@@ -233,15 +266,11 @@
                 font-size: 1.75rem;
             }
             .entry-meta {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-                line-height: 1;
+                line-height: 1.5;
                 .entry-title {
                     margin: 0;
                     font-weight: lighter;
+                    display: inline;
                 }
                 .source {
                     font-size: 1.5rem;

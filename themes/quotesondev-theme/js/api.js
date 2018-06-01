@@ -31,7 +31,7 @@
                 $('.entry-content p').empty();
                 $('.entry-content p').append(newContent);
                 $('.entry-title').empty();
-                $('.entry-title').append(newTitle);
+                $('.entry-title').append(' &mdash;' + newTitle);
   
                 // if quotesource, update/display
                 
