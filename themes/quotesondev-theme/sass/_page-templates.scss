@@ -83,6 +83,10 @@
             color: white;
             width: 60%;
         }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: white;
+        }
         textarea {
             border: 1px solid $color__green;
             background: transparent;
@@ -97,6 +101,10 @@
             outline: none;
             width: 50%;
             color: $color__green;
+        }
+        #submit-quote:hover {
+            border-color: darken($color__green, 10%);
+            color: darken($color__green, 10%);
         }
     }
 }
@@ -143,12 +151,17 @@
     h1 {
         font-weight: lighter;
     }
-    .search-field {
+    .search-field, .search-field:focus {
         background: transparent;
         border: 2px solid $color__green;
         width: 240px;
         font-size: 1.25rem;
         padding-left: .75rem;
+        color: white;
+    }
+    .search-field:focus {
+        border-color: white;
+        outline: none;
     }
     .search-submit {
         border: 0;
@@ -164,12 +177,36 @@
     }
 }
 
+/* Search results */
+
+.search {
+    .site-main {
+        display: flex;
+        .search-container {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            .page-header {
+                border-bottom: 1px dotted #ffffff;
+                width: 100%;
+            }
+            article {
+                width: 100%;
+            }
+            .entry-header .entry-title {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
 /* Media Queries */
 
 /* Desktop Version */
 
 @include desktop {
-	.home, .page-template-default, .single, .error404 {
+	.home, .page-template-default, .single, .error404, .search {
 		.site-main {
 			display: flex;
 			justify-content: center;
