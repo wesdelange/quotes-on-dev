@@ -1,11 +1,24 @@
 # quotes-on-dev
 
-Project #5
-Quotes-on-Dev
+Our fifth project at RED Academy, responsive website built with Wordpress, using rest API to display random quote.
 
-Responsively designed website using JavaScript and Wordpress.
-Used rest API to manage JS functions.
-Used custom page templates and custom theme.
+## Personal Learnings
+
+* Learned how to use Rest API to incorporate JavaScript and Jquery
+* Learned how to use GET and POST requests to  WP endpoint API using Ajax 
+* Learned how to retrieve post information when navigating back and forth on browser
+
+## Technologies Used
+
+* Visual Studio Code
+* Git and GitBash
+* JavaScript and JQuery
+* Font Awesome
+* Eric Meyer CSS Reset
+* Google Chrome Developer Tools
+* Sass, Gulp and Ajax
+* Wordpress
+* PHP
 
 ## Desktop
 
