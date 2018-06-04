@@ -1,4 +1,4 @@
-# quotes-on-dev
+# Quotes-on-Dev
 
 Our fifth project at RED Academy, responsive website built with Wordpress, using rest API to display random quote.
 
